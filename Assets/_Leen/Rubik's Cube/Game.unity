@@ -2960,7 +2960,7 @@ Transform:
   m_GameObject: {fileID: 907414764}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 0, z: 0}
+  m_LocalPosition: {x: -2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4535,6 +4535,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1371482187}
+  - component: {fileID: 1371482188}
   m_Layer: 5
   m_Name: Cube Map
   m_TagString: Untagged
@@ -4567,6 +4568,24 @@ RectTransform:
   m_AnchoredPosition: {x: -734.1, y: 285.9}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1371482188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371482186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a0e1ae074d46104e87c8845c88d56e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CubeMap
+  up: {fileID: 13117668}
+  down: {fileID: 1783906317}
+  left: {fileID: 203937399}
+  right: {fileID: 121736470}
+  front: {fileID: 226396570}
+  back: {fileID: 776503229}
 --- !u!1 &1377249271
 GameObject:
   m_ObjectHideFlags: 0
@@ -6743,7 +6762,7 @@ Transform:
   m_GameObject: {fileID: 2066935088}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 0, z: 0}
+  m_LocalPosition: {x: 2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
