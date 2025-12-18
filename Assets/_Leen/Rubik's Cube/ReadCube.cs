@@ -12,8 +12,8 @@ public class ReadCube : MonoBehaviour
     public Transform tBack;
 
     private int layerMask = 1 << 6; // Layer 6 is assigned to "Faces"
-    private CubeState cubeState;
-    private CubeMap cubeMap;
+    CubeState cubeState;
+    CubeMap cubeMap;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,6 +23,12 @@ public class ReadCube : MonoBehaviour
 
         ///
 
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         List<GameObject> facesHit = new List<GameObject>();
         Vector3 ray = tFront.transform.position;
         RaycastHit hit;
@@ -36,18 +42,12 @@ public class ReadCube : MonoBehaviour
         }
         else
         {
-            Debug.DrawRay(ray, tFront.right * 1000, Color.red);
+            Debug.DrawRay(ray, tFront.right * 1000, Color.green);
             Debug.Log("Face: No hit");
         }
 
         cubeState.front = facesHit;  // Update the cube state front face
 
         cubeMap.Set();  // Update the cube map display
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
