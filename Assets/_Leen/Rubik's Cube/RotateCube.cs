@@ -54,7 +54,26 @@ public class RotateCube : MonoBehaviour
                 Debug.Log("Right Swipe Detected");
                 target.transform.Rotate( 0, -90, 0, Space.World);
             }
-
+            else if (UpLeftSwipe(currentSwipe))
+            {
+                Debug.Log("Up-Left Swipe Detected");
+                target.transform.Rotate( 90, 0, 0, Space.World);
+            }
+            else if (UpRightSwipe(currentSwipe))
+            {
+                Debug.Log("Up-Right Swipe Detected");
+                target.transform.Rotate( 0, 0, -90, Space.World);
+            }
+            else if (DownLeftSwipe(currentSwipe))
+            {
+                Debug.Log("Down-Left Swipe Detected");
+                target.transform.Rotate( 0, 0, 90, Space.World);
+            }
+            else if (DownRightSwipe(currentSwipe))
+            {
+                Debug.Log("Down-Right Swipe Detected");
+                target.transform.Rotate( -90, 0, 0, Space.World);
+            }
 
         }
     }
@@ -67,6 +86,25 @@ public class RotateCube : MonoBehaviour
     bool RightSwipe(Vector2 swipe)
     {
         return currentSwipe.x > 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f;
+    }
+
+    bool UpLeftSwipe(Vector2 swipe)
+    {
+        return currentSwipe.y > 0 && currentSwipe.x < 0;
+    }
+
+    bool UpRightSwipe(Vector2 swipe) 
+    {
+        return currentSwipe.y > 0 && currentSwipe.x > 0;
+    }
+    bool DownLeftSwipe(Vector2 swipe)
+    {
+        return currentSwipe.y < 0 && currentSwipe.x < 0;
+    }
+
+    bool DownRightSwipe(Vector2 swipe) 
+    {
+        return currentSwipe.y < 0 && currentSwipe.x > 0;
     }
 
     void _RotateCube()
