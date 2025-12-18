@@ -67,6 +67,7 @@ public class CubeMap : MonoBehaviour
         int i = 0;
         foreach (Transform map in side)
         {
+            // here we chose the colors based on the face name
             if (face[0].name[0] == 'F')
             {
                 map.GetComponent<Image>().color = new Color(1, 0.5f, 0); // Orange
