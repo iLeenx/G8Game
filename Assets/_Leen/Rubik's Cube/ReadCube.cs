@@ -23,12 +23,6 @@ public class ReadCube : MonoBehaviour
 
         ///
 
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         List<GameObject> facesHit = new List<GameObject>();
         Vector3 ray = tFront.transform.position;
         RaycastHit hit;
@@ -49,5 +43,11 @@ public class ReadCube : MonoBehaviour
         cubeState.front = facesHit;  // Update the cube state front face
 
         cubeMap.Set();  // Update the cube map display
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }
