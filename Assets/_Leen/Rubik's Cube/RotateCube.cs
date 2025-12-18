@@ -9,6 +9,10 @@ public class RotateCube : MonoBehaviour
     public GameObject target;  // Reference to the cube GameObject
     public float speed = 200f;  // Speed of rotation
 
+    public float rotationSensitivity = 0.4f; // Sensitivity of mouse drag rotation
+    private Vector3 previousMousePosition;
+    private Vector3 mouseDelta;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,7 +23,8 @@ public class RotateCube : MonoBehaviour
     void Update()
     {
         Swipe();
-        _RotateCube();
+        Drag();
+
     }
 
     public void Swipe()
@@ -115,5 +120,21 @@ public class RotateCube : MonoBehaviour
             var step = speed * Time.deltaTime;
             transform.rotation = Quaternion.RotateTowards(transform.rotation, target.transform.rotation, step);
         }
+    }
+
+    void Drag()
+    {
+        if (Input.GetMouseButton(1))
+        {
+            // while right mouse button is held down
+            mouseDelta = Input.mousePosition - previousMousePosition;
+            mouseDelta *= rotationSensitivity; // rotation speed
+            transform.rotation = Quaternion.Euler(mouseDelta.y, -mouseDelta.x, 0) * transform.rotation;
+        }
+        else
+        {
+            _RotateCube();
+        }
+        previousMousePosition = Input.mousePosition;
     }
 }
