@@ -13,7 +13,7 @@ public class RotateCube : MonoBehaviour
     private Vector3 previousMousePosition;
     private Vector3 mouseDelta;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Start is called once before the first execution
     void Start()
     {
         
@@ -24,7 +24,6 @@ public class RotateCube : MonoBehaviour
     {
         Swipe();
         Drag();
-
     }
 
     public void Swipe()
@@ -87,17 +86,14 @@ public class RotateCube : MonoBehaviour
     {
         return currentSwipe.x < 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f;
     }
-
     bool RightSwipe(Vector2 swipe)
     {
         return currentSwipe.x > 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f;
     }
-
     bool UpLeftSwipe(Vector2 swipe)
     {
         return currentSwipe.y > 0 && currentSwipe.x < 0;
     }
-
     bool UpRightSwipe(Vector2 swipe) 
     {
         return currentSwipe.y > 0 && currentSwipe.x > 0;
@@ -106,7 +102,6 @@ public class RotateCube : MonoBehaviour
     {
         return currentSwipe.y < 0 && currentSwipe.x < 0;
     }
-
     bool DownRightSwipe(Vector2 swipe) 
     {
         return currentSwipe.y < 0 && currentSwipe.x > 0;
