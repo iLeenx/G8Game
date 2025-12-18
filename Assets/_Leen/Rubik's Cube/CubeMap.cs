@@ -70,7 +70,7 @@ public class CubeMap : MonoBehaviour
             // here we chose the colors based on the face name
             if (face[i].name[0] == 'F')
             {
-                map.GetComponent<Image>().color = new Color(1, 0.5f, 0); // Orange
+                map.GetComponent<Image>().color = new Color(1, 0.5f, 0, 1); // Orange
             }
             if (face[i].name[0] == 'B')
             {
@@ -86,14 +86,13 @@ public class CubeMap : MonoBehaviour
             }
             if (face[i].name[0] == 'L')
             {
-                map.GetComponent<Image>().color = Color.blue;
+                map.GetComponent<Image>().color = Color.green;
             }
             if (face[i].name[0] == 'R')
             {
-                map.GetComponent<Image>().color = Color.green;
+                map.GetComponent<Image>().color = Color.blue;
             }
-
-            i++; // increment index to access next face in the list
+            i++;
         }
 
 
