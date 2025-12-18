@@ -92,19 +92,19 @@ public class RotateCube : MonoBehaviour
     }
     bool UpLeftSwipe(Vector2 swipe)
     {
-        return currentSwipe.y > 0 && currentSwipe.x < 0;
+        return currentSwipe.y > 0 && currentSwipe.x < 0f;
     }
     bool UpRightSwipe(Vector2 swipe) 
     {
-        return currentSwipe.y > 0 && currentSwipe.x > 0;
+        return currentSwipe.y > 0 && currentSwipe.x > 0f;
     }
     bool DownLeftSwipe(Vector2 swipe)
     {
-        return currentSwipe.y < 0 && currentSwipe.x < 0;
+        return currentSwipe.y < 0 && currentSwipe.x < 0f;
     }
     bool DownRightSwipe(Vector2 swipe) 
     {
-        return currentSwipe.y < 0 && currentSwipe.x > 0;
+        return currentSwipe.y < 0 && currentSwipe.x > 0f;
     }
 
     void _RotateCube()
