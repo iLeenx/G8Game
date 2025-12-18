@@ -2243,6 +2243,7 @@ MonoBehaviour:
   tRight: {fileID: 1959771528}
   tFront: {fileID: 1136025460}
   tBack: {fileID: 1470119315}
+  emptyGO: {fileID: 454910914100173604, guid: f95c6654b7d045d4ca6d858630345002, type: 3}
 --- !u!114 &651008217
 MonoBehaviour:
   m_ObjectHideFlags: 0
