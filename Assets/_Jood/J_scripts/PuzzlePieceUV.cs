@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PuzzlePieceUV : MonoBehaviour
 {
-    public int col;
+    public int col; 
     public int row; 
     public int gridSize = 3;
 
