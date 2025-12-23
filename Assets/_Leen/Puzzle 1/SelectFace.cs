@@ -6,7 +6,7 @@ public class SelectFace : MonoBehaviour
 {
     private CubeState cubeState;
     private ReadCube readCube;
-    private int layerMask = 1 << 8;
+    private int layerMask = 1 << 6;
 
 
     // Start is called before the first frame update

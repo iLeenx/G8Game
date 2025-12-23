@@ -18,7 +18,7 @@ public class ReadCube : MonoBehaviour
     private List<GameObject> leftRays = new List<GameObject>();
     private List<GameObject> rightRays = new List<GameObject>();
 
-    private int layerMask = 1 << 8; // this layerMask is for the faces of the cube only
+    private int layerMask = 1 << 6; // this layerMask is for the faces of the cube only
     CubeState cubeState;
     CubeMap cubeMap;
     public GameObject emptyGO;
