@@ -8,7 +8,7 @@ public class Automate : MonoBehaviour
     private readonly List<string> allMoves = new List<string>()
         { "U", "D", "L", "R", "F", "B",
           "U2", "D2", "L2", "R2", "F2", "B2",
-          "U'", "D'", "L'", "R'", "F'", "B'" 
+          "U'", "D'", "L'", "R'", "F'", "B'"
         };
 
     private CubeState cubeState;
@@ -24,7 +24,7 @@ public class Automate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (moveList.Count > 0  && !CubeState.autoRotating && CubeState.started)
+        if (moveList.Count > 0 && !CubeState.autoRotating && CubeState.started)
         {
             //Do the move at the first index;
             DoMove(moveList[0]);
@@ -130,7 +130,7 @@ public class Automate : MonoBehaviour
     {
         // automatically rotate the side by the angle
         PivotRotation pr = side[4].transform.parent.GetComponent<PivotRotation>();
-        pr.StartAutoRotate(side, angle);        
+        pr.StartAutoRotate(side, angle);
     }
 
 }

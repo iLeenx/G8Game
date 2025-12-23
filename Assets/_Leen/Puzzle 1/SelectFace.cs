@@ -8,7 +8,7 @@ public class SelectFace : MonoBehaviour
     private ReadCube readCube;
     private int layerMask = 1 << 8;
 
-    
+
     // Start is called before the first frame update
     void Start()
     {

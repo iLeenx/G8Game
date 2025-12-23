@@ -16,13 +16,13 @@ public class ReadCube : MonoBehaviour
     private List<GameObject> upRays = new List<GameObject>();
     private List<GameObject> downRays = new List<GameObject>();
     private List<GameObject> leftRays = new List<GameObject>();
-    private List<GameObject> rightRays = new List<GameObject>();   
+    private List<GameObject> rightRays = new List<GameObject>();
 
     private int layerMask = 1 << 8; // this layerMask is for the faces of the cube only
     CubeState cubeState;
-    CubeMap   cubeMap;
+    CubeMap cubeMap;
     public GameObject emptyGO;
-       
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,10 +31,9 @@ public class ReadCube : MonoBehaviour
 
         cubeState = Object.FindFirstObjectByType<CubeState>();
         cubeMap = Object.FindFirstObjectByType<CubeMap>();
-
         ReadState();
         CubeState.started = true;
-       
+
 
     }
 
@@ -91,7 +90,7 @@ public class ReadCube : MonoBehaviour
         {
             for (int x = -1; x < 2; x++)
             {
-                Vector3 startPos = new Vector3( rayTransform.localPosition.x + x,
+                Vector3 startPos = new Vector3(rayTransform.localPosition.x + x,
                                                 rayTransform.localPosition.y + y,
                                                 rayTransform.localPosition.z);
                 GameObject rayStart = Instantiate(emptyGO, startPos, Quaternion.identity, rayTransform);
@@ -115,6 +114,7 @@ public class ReadCube : MonoBehaviour
             RaycastHit hit;
 
             // Does the ray intersect any objects in the layerMask?
+            // does the ray intersect with any objects in the "Faces" layer?
             if (Physics.Raycast(ray, rayTransform.forward, out hit, Mathf.Infinity, layerMask))
             {
                 Debug.DrawRay(ray, rayTransform.forward * hit.distance, Color.yellow);

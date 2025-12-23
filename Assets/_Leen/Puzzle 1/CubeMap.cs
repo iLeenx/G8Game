@@ -17,13 +17,13 @@ public class CubeMap : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void Set()
     {
@@ -68,6 +68,6 @@ public class CubeMap : MonoBehaviour
                 map.GetComponent<Image>().color = Color.blue;
             }
             i++;
-        }               
+        }
     }
 }

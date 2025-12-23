@@ -18,7 +18,7 @@ public class PivotRotation : MonoBehaviour
 
     private ReadCube readCube;
     private CubeState cubeState;
-       
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +42,7 @@ public class PivotRotation : MonoBehaviour
         {
             AutoRotate();
         }
-                
+
     }
 
     private void SpinSide(List<GameObject> side)
@@ -51,7 +51,7 @@ public class PivotRotation : MonoBehaviour
         rotation = Vector3.zero;
 
         // current mouse position minus the last mouse position
-        Vector3 mouseOffset = (Input.mousePosition - mouseRef);        
+        Vector3 mouseOffset = (Input.mousePosition - mouseRef);
 
 
         if (side == cubeState.up)
@@ -85,7 +85,7 @@ public class PivotRotation : MonoBehaviour
         mouseRef = Input.mousePosition;
     }
 
-         
+
     public void Rotate(List<GameObject> side)
     {
         activeSide = side;
@@ -130,9 +130,14 @@ public class PivotRotation : MonoBehaviour
             // unparent the little cubes
             cubeState.PutDown(activeSide, transform.parent);
             readCube.ReadState();
+
+            //readCube.ReadState();
+            //FindObjectOfType<WinChecker>().playerHasMoved = true;
+            //FindObjectOfType<WinChecker>().CheckWin();
+
             CubeState.autoRotating = false;
             autoRotating = false;
-            dragging = false;                                                               
+            dragging = false;
         }
-    }         
+    }
 }
