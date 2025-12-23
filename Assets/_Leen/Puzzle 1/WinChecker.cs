@@ -15,6 +15,8 @@ public class WinChecker : MonoBehaviour
     private bool won = false;
 
     public bool playerHasMoved = false;
+    private bool ready = false;
+    private bool playerMoved = false;
 
 
     void Start()
@@ -34,39 +36,69 @@ public class WinChecker : MonoBehaviour
         // hide the win panel at start
         if (winPanel != null)
             winPanel.SetActive(false);
+
+        Debug.Log("Current: " + cubeState.GetStateString());
+        Debug.Log("Solved: " + solvedState);
+
+    }
+
+    public void ReadyCheck()
+    {
+        ready = true;
     }
 
     // call this after every move/rotation
     public void CheckWin()
     {
-        if (!playerHasMoved) return;
+        //if (!playerHasMoved) return;
 
-        Debug.Log("CheckWin called");
+        //Debug.Log("CheckWin called");
 
-        Debug.Log("Current: " + cubeState.GetStateString());
-        Debug.Log("Solved: " + solvedState);
+        //Debug.Log("Current: " + cubeState.GetStateString());
+        //Debug.Log("Solved: " + solvedState);
 
+        //if (won || cubeState == null) return;
+
+        //if (cubeState.GetStateString() == solvedState)
+        //{
+
+
+        //    won = true;
+        //    Debug.Log("Cube Solved!");
+
+        //    // show win panel
+        //    if (winPanel != null)
+        //        winPanel.SetActive(true);
+
+        //    if (winText != null)
+        //        winText.text = "You solved the cube!";
+
+        //    // play audio
+        //    if (audioSource != null && winClip != null)
+        //    {
+        //        audioSource.PlayOneShot(winClip);
+        //    }
+        //}
+
+        if (!ready || !playerMoved) return; // ignore before first move
         if (won || cubeState == null) return;
 
         if (cubeState.GetStateString() == solvedState)
         {
-
-
             won = true;
             Debug.Log("Cube Solved!");
 
-            // show win panel
             if (winPanel != null)
                 winPanel.SetActive(true);
-
             if (winText != null)
                 winText.text = "You solved the cube!";
-
-            // play audio
             if (audioSource != null && winClip != null)
-            {
                 audioSource.PlayOneShot(winClip);
-            }
         }
+    }
+
+    public void PlayerMoved()
+    {
+        playerMoved = true;
     }
 }

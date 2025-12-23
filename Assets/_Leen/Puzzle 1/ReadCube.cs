@@ -32,6 +32,10 @@ public class ReadCube : MonoBehaviour
         cubeState = Object.FindFirstObjectByType<CubeState>();
         cubeMap = Object.FindFirstObjectByType<CubeMap>();
         ReadState();
+
+        CubeState.started = true;
+        FindObjectOfType<WinChecker>().ReadyCheck();
+
         CubeState.started = true;
 
 
