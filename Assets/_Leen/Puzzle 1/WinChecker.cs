@@ -1,11 +1,15 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class WinChecker : MonoBehaviour
 {
     [Header("UI Elements")]
+    public GameObject startPanel;
+    public GameObject solverPanel;
     public GameObject winPanel; // assign a panel with text/images in inspector
-    public Text winText;        // optional, assign a Text component
+    public GameObject leavePanel;
+    
     [Header("Audio")]
     public AudioSource audioSource; // assign an AudioSource
     public AudioClip winClip;       // assign a victory sound
@@ -51,16 +55,34 @@ public class WinChecker : MonoBehaviour
 
         // hide the win panel at start
         if (winPanel != null)
+        {
             winPanel.SetActive(false);
+        }
+        if (startPanel != null)
+        {
+            startPanel.SetActive(true);
+        }
+        if (solverPanel != null)
+        {
+            solverPanel.SetActive(true);
+        }
+        if (leavePanel != null)
+        {
+            leavePanel.SetActive(false);
+        }
         if (audioSource != null)
+        {
             audioSource.enabled = false;
+        }
 
         Debug.Log("Current: " + cubeState.GetStateString());
         Debug.Log("Solved: " + solvedState);
 
 
         if (solverButton != null)
+        {
             solverButton.SetActive(false);
+        }
 
     }
 
@@ -124,13 +146,19 @@ public class WinChecker : MonoBehaviour
             Debug.Log("Cube Solved!");
 
             if (winPanel != null)
+            {
                 winPanel.SetActive(true);
-            if (winText != null)
-                winText.text = "You solved the cube!";
+            }
+
             if (audioSource != null && audioSource.enabled == false)
+            {
                 audioSource.enabled = true;
+            }
+
             if (audioSource != null && winClip != null)
+            {
                 audioSource.PlayOneShot(winClip);
+            }
         }
     }
 
