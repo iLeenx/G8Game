@@ -14,14 +14,19 @@ public class WinChecker : MonoBehaviour
     private string solvedState;
     private bool won = false;
 
-    public bool playerHasMoved = false;
+    //public bool playerHasMoved = false;
     private bool ready = false;
     private bool playerMoved = false;
 
 
+
     void Start()
     {
+        Debug.Log($"player has moved =  / ready = {ready} / player mover = {playerMoved}");
+        // {playerHasMoved}
+
         cubeState = Object.FindFirstObjectByType<CubeState>();
+
         if (cubeState == null)
         {
             Debug.LogError("WinChecker: CubeState not found in scene!");
@@ -36,6 +41,8 @@ public class WinChecker : MonoBehaviour
         // hide the win panel at start
         if (winPanel != null)
             winPanel.SetActive(false);
+        if (audioSource != null)
+            audioSource.enabled = false;
 
         Debug.Log("Current: " + cubeState.GetStateString());
         Debug.Log("Solved: " + solvedState);
@@ -92,6 +99,8 @@ public class WinChecker : MonoBehaviour
                 winPanel.SetActive(true);
             if (winText != null)
                 winText.text = "You solved the cube!";
+            if (audioSource != null && audioSource.enabled == false)
+                audioSource.enabled = true;
             if (audioSource != null && winClip != null)
                 audioSource.PlayOneShot(winClip);
         }
@@ -100,5 +109,11 @@ public class WinChecker : MonoBehaviour
     public void PlayerMoved()
     {
         playerMoved = true;
+    }
+
+    public void CheckStateOfBool()
+    {
+        Debug.Log($"player has moved =  / ready = {ready} / player mover = {playerMoved}");
+        //{playerHasMoved}
     }
 }
