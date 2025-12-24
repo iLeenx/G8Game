@@ -18,7 +18,18 @@ public class WinChecker : MonoBehaviour
     private bool ready = false;
     private bool playerMoved = false;
 
+    // to show the solver button
 
+    [Header("The hidden solver button UI")]
+    public GameObject solverButton;
+
+    [Header("Which keys unlock it?")]
+    public KeyCode key1 = KeyCode.LeftShift;
+    public KeyCode key2 = KeyCode.RightShift;
+    public KeyCode key3 = KeyCode.LeftControl;
+    public KeyCode key4 = KeyCode.RightControl;
+
+    private bool unlocked = false;
 
     void Start()
     {
@@ -47,6 +58,23 @@ public class WinChecker : MonoBehaviour
         Debug.Log("Current: " + cubeState.GetStateString());
         Debug.Log("Solved: " + solvedState);
 
+
+        if (solverButton != null)
+            solverButton.SetActive(false);
+
+    }
+
+    void Update()
+    {
+        // if already unlocked, stop checking
+        if (unlocked) return;
+
+        if (Input.GetKey(key1) && Input.GetKey(key2) && Input.GetKey(key3) && Input.GetKey(key4))
+        {
+            solverButton.SetActive(true);
+            unlocked = true;
+            Debug.Log("Solver unlocked by secret key combo!");
+        }
     }
 
     public void ReadyCheck()
