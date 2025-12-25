@@ -137,6 +137,8 @@ public class WinChecker : MonoBehaviour
         //    }
         //}
 
+        if (startPanel != null && startPanel.activeSelf) return;
+
         if (!ready || !playerMoved) return; // ignore before first move
         if (won || cubeState == null) return;
 
@@ -171,5 +173,15 @@ public class WinChecker : MonoBehaviour
     {
         Debug.Log($"player has moved =  / ready = {ready} / player mover = {playerMoved}");
         //{playerHasMoved}
+    }
+
+    public void OnShufflePressed()
+    {
+        // enable all 6 cube faces
+        PivotRotation[] faces = PivotRotation.FindObjectsByType<PivotRotation>(FindObjectsSortMode.None);
+        foreach (PivotRotation face in faces)
+        {
+            face.canInteract = true;
+        }
     }
 }

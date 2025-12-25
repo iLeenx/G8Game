@@ -19,6 +19,9 @@ public class PivotRotation : MonoBehaviour
     private ReadCube readCube;
     private CubeState cubeState;
 
+    public bool canInteract = false; // default false
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +32,8 @@ public class PivotRotation : MonoBehaviour
     // Late Update is called once per frame at the end
     void LateUpdate()
     {
+        if (!canInteract) return;
+
         if (dragging && !autoRotating)
         {
             SpinSide(activeSide);
