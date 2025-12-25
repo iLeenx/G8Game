@@ -140,8 +140,9 @@ public class PivotRotation : MonoBehaviour
             //FindObjectOfType<WinChecker>().playerHasMoved = true;
             //FindObjectOfType<WinChecker>().CheckWin();
 
-            FindObjectOfType<WinChecker>().PlayerMoved();
-            FindObjectOfType<WinChecker>().CheckWin();
+            WinChecker winChecker = WinChecker.FindFirstObjectByType<WinChecker>();
+            winChecker.PlayerMoved();
+            winChecker.CheckWin();
 
             CubeState.autoRotating = false;
             autoRotating = false;
