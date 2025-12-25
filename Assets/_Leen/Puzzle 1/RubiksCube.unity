@@ -510,6 +510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d97b0bb89d8074c9b3b0a7e76120a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canInteract: 0
 --- !u!4 &116562220 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6916545666834172400, guid: af4383798923b8446b523ca30ec1bbd2, type: 3}
@@ -2918,6 +2919,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d97b0bb89d8074c9b3b0a7e76120a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canInteract: 0
 --- !u!1 &667852825
 GameObject:
   m_ObjectHideFlags: 0
@@ -5966,6 +5968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d97b0bb89d8074c9b3b0a7e76120a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canInteract: 0
 --- !u!1 &1231348072
 GameObject:
   m_ObjectHideFlags: 0
@@ -7563,6 +7566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d97b0bb89d8074c9b3b0a7e76120a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canInteract: 0
 --- !u!1 &1527172062
 GameObject:
   m_ObjectHideFlags: 0
@@ -9319,6 +9323,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 445388969}
+        m_TargetAssemblyTypeName: WinChecker, Assembly-CSharp
+        m_MethodName: OnShufflePressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1841353478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9379,6 +9395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d97b0bb89d8074c9b3b0a7e76120a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canInteract: 0
 --- !u!1 &1865299285
 GameObject:
   m_ObjectHideFlags: 0
@@ -9600,6 +9617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d97b0bb89d8074c9b3b0a7e76120a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canInteract: 0
 --- !u!1001 &1898031001
 PrefabInstance:
   m_ObjectHideFlags: 0
