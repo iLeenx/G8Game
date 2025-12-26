@@ -21,11 +21,16 @@ public class ScannerFlashEffect : MonoBehaviour
     private int hiddenLayer;
     private bool onCooldown;
 
+    [Header("Unlock")]
+    public bool isUnlocked = true;   // becomes true when player picks up flashlight
+
+
     void Awake()
     {
         if (cam == null) cam = GetComponent<Camera>();
         hiddenLayer = LayerMask.NameToLayer(hiddenLayerName);
     }
+
 
     void Start()
     {
@@ -37,6 +42,8 @@ public class ScannerFlashEffect : MonoBehaviour
 
     void Update()
     {
+        //if (!isUnlocked) return;
+
         if (Input.GetKeyDown(flashKey) && !onCooldown)
             StartCoroutine(FlashRoutine());
     }
