@@ -10,21 +10,44 @@ public class PlayerInteraction : MonoBehaviour
     public float interactDistance = 3f;
     public LayerMask interactLayer;
 
+    PuzzlePiece currentPiece;
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Ray ray = new Ray(transform.position, transform.forward);
-            RaycastHit hit;
+        Ray ray = new Ray(transform.position, transform.forward);
 
-            if (Physics.Raycast(ray, out hit, interactDistance, interactLayer))
+        if (Physics.Raycast(ray, out RaycastHit hit, interactDistance, interactLayer))
+        {
+            PuzzlePiece piece = hit.collider.GetComponent<PuzzlePiece>();
+
+            if (piece != null)
             {
-                IInteractable interactable = hit.collider.GetComponent<IInteractable>();
-                if (interactable != null)
+                if (currentPiece != piece)
                 {
-                    interactable.Interact();
+                    ClearOutline();
+                    currentPiece = piece;
+                    currentPiece.ShowOutline();
                 }
+
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    piece.Interact();
+                }
+
+                return;
             }
+        }
+
+        // If ray hits nothing or something else
+        ClearOutline();
+    }
+
+    void ClearOutline()
+    {
+        if (currentPiece != null)
+        {
+            currentPiece.HideOutline();
+            currentPiece = null;
         }
     }
 }

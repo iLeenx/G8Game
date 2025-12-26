@@ -486,6 +486,7 @@ GameObject:
   - component: {fileID: 365073849}
   - component: {fileID: 365073848}
   - component: {fileID: 365073854}
+  - component: {fileID: 365073855}
   m_Layer: 7
   m_Name: Piece_0_1
   m_TagString: drag
@@ -629,6 +630,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 424df6f33a2485a45952c046ca94197d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzlePiece
+  outline: {fileID: 365073855}
+--- !u!114 &365073855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365073847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Outline
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 10
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &950168854
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,7 +834,7 @@ Light:
   serializedVersion: 11
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 15
+  m_Intensity: 8
   m_Range: 295.77823
   m_SpotAngle: 130.23405
   m_InnerSpotAngle: 100.04128
@@ -877,7 +897,7 @@ Transform:
   m_GameObject: {fileID: 1161412954}
   serializedVersion: 2
   m_LocalRotation: {x: -0.18203211, y: -0, z: -0, w: 0.98329264}
-  m_LocalPosition: {x: 0, y: -0.0000006556511, z: 0.7460003}
+  m_LocalPosition: {x: 0, y: -0.0000006556511, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1312,7 +1332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71f3bb7b3fb281448afe4bfc38fcc8cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInteraction
-  interactDistance: 3
+  interactDistance: 5
   interactLayer:
     serializedVersion: 2
     m_Bits: 128
