@@ -27,14 +27,14 @@ public class PuzzleSnapPiece : MonoBehaviour
     {
         if (IsSnapped) return;
 
-        // 1) Check closeness in XZ (ignore height)
+        // Check closeness in XZ (ignore height)
         Vector2 p = new Vector2(transform.position.x, transform.position.z);
         Vector2 t = new Vector2(correctPos.x, correctPos.z);
         float d = Vector2.Distance(p, t);
 
         if (d > snapDistance) return;
 
-        // 2) Check rotation (Y axis) if required
+        // Check rotation (Y axis)
         if (requireCorrectRotation)
         {
             float currentY = NormalizeAngle(transform.eulerAngles.y);
@@ -47,10 +47,6 @@ public class PuzzleSnapPiece : MonoBehaviour
         //  Snap (NOTE: do NOT "fix" rotation unless already correct)
         transform.position = new Vector3(correctPos.x, snappedY, correctPos.z);
 
-        // Optional: If you want it to keep rotation exactly as-is (since it's already correct)
-        // transform.rotation = transform.rotation;
-
-        // Or you can set it to correctRot (safe now because we already verified it's correct)
         transform.rotation = correctRot;
 
         IsSnapped = true;
