@@ -12,7 +12,7 @@ public class ScannerFlashEffect : MonoBehaviour
     public string hiddenLayerName = "HiddenPieces";
 
     [Header("Unlock")]
-    public bool isUnlocked = true; // set true when flashlight is picked up
+    public bool isUnlocked = false; // set true when flashlight is picked up
 
     private int hiddenLayer;
     private bool isScanning = false;
