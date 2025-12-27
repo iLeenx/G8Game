@@ -600,7 +600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed563015942dc9d44a411e249184814c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CubePiece
-  correctRotation: {x: 0, y: 0, z: 0}
+  correctRotation: {x: 0, y: 90, z: 0}
 --- !u!114 &4824644459653348486
 MonoBehaviour:
   m_ObjectHideFlags: 0

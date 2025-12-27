@@ -8,6 +8,12 @@ public class LaserManager : MonoBehaviour
     void Start()
     {
         // Check states and update lasers at start
+        CheckLaserState();
+    }
+
+    public void CheckLaserState()
+    {
+        // Check states and update lasers at start
         for (int i = 0; i < lasers.Length; i++)
         {
             if (PuzzleStateManager.IsLaserSolved(i))
@@ -18,7 +24,9 @@ public class LaserManager : MonoBehaviour
 
         // Enable ruby if all lasers solved
         ruby.GetComponent<Collider>().enabled = PuzzleStateManager.AllLasersSolved();
+
     }
+       
 
     public void CheckAllLasers()
     {
@@ -29,4 +37,6 @@ public class LaserManager : MonoBehaviour
             Debug.Log("All lasers off! Ruby is collectible.");
         }
     }
+
+    
 }
