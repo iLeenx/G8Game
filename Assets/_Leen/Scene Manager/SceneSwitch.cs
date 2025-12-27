@@ -5,7 +5,7 @@ public class SceneSwitch : MonoBehaviour
 {
     public void _GoMainMenu()
     {
-        SceneManager.LoadScene("Main menu");
+        SceneManager.LoadScene("Main Menu");
 
         Cursor.visible = true;
         Time.timeScale = 1f;
