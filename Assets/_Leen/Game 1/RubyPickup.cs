@@ -1,0 +1,25 @@
+using UnityEngine;
+
+public class RubyPickup : MonoBehaviour
+{
+    private bool canPickUp = false;
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player")) canPickUp = true;
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player")) canPickUp = false;
+    }
+
+    void Update()
+    {
+        if (canPickUp && Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("Ruby Stolen!");
+            Destroy(gameObject); // or start cutscene
+        }
+    }
+}
