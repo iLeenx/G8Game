@@ -161,6 +161,17 @@ public class WinChecker : MonoBehaviour
             {
                 audioSource.PlayOneShot(winClip);
             }
+
+            //FindObjectOfType<LaserManager>().DisableLaser(0);
+            //Object.FindFirstObjectByType<LaserManager>().DisableLaser(0);
+
+            // Example for laser 0
+            PuzzleStateManager.SolveLaser(0);
+
+            // Optional: tell LaserManager to update
+            LaserManager lm = Object.FindFirstObjectByType<LaserManager>();
+            if (lm != null) lm.CheckAllLasers();
+
         }
     }
 

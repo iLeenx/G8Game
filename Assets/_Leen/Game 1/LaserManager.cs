@@ -2,31 +2,31 @@ using UnityEngine;
 
 public class LaserManager : MonoBehaviour
 {
-    public GameObject[] lasers;
-    public GameObject ruby;
+    public GameObject[] lasers;    // 3 lasers
+    public GameObject ruby;        // ruby object
 
-    private int disabledLasers = 0;
-
-    public void DisableLaser(int index)
+    void Start()
     {
-        if (index < 0 || index >= lasers.Length) return;
-
-        lasers[index].SetActive(false);
-        disabledLasers++;
-
-        Debug.Log("Laser " + index + " disabled!");
-
-        if (disabledLasers == lasers.Length)
+        // Check states and update lasers at start
+        for (int i = 0; i < lasers.Length; i++)
         {
-            Debug.Log("ALL LASERS OFF! You can steal the ruby!");
-            EnableRubyPickup();
+            if (PuzzleStateManager.IsLaserSolved(i))
+                lasers[i].SetActive(false);
+            else
+                lasers[i].SetActive(true);
         }
+
+        // Enable ruby if all lasers solved
+        ruby.GetComponent<Collider>().enabled = PuzzleStateManager.AllLasersSolved();
     }
 
-    void EnableRubyPickup()
+    public void CheckAllLasers()
     {
-        // allow player to pick up the ruby
-        ruby.GetComponent<Collider>().enabled = true;
-        // or show UI text like "Press E to take ruby"
+        // Turn off ruby collider if all lasers solved
+        if (PuzzleStateManager.AllLasersSolved())
+        {
+            ruby.GetComponent<Collider>().enabled = true;
+            Debug.Log("All lasers off! Ruby is collectible.");
+        }
     }
 }

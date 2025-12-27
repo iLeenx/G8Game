@@ -10,6 +10,13 @@ public class SceneSwitch : MonoBehaviour
         Cursor.visible = true;
         Time.timeScale = 1f;
     }
+    public void _GoPlay()
+    {
+        SceneManager.LoadScene("Game 1");
+
+        Cursor.visible = true;
+        Time.timeScale = 1f;
+    }
 
     public void _GoSettings()
     {
