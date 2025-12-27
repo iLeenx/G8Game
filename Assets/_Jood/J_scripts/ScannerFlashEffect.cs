@@ -1,6 +1,4 @@
-using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ScannerFlashEffect : MonoBehaviour
 {
@@ -8,22 +6,16 @@ public class ScannerFlashEffect : MonoBehaviour
     public Camera cam;                // Main camera
     public Light scannerLight;        // Spot Light (ScannerLight)
     public AudioSource audioSource;
-    public AudioClip flashSfx;        
+    public AudioClip flashSfx;
 
     [Header("Reveal Layer")]
     public string hiddenLayerName = "HiddenPieces";
 
-    [Header("Timing")]
-    public KeyCode flashKey = KeyCode.F;
-    public float flashDuration = 3f;
-    public float cooldown = 6f;
+    [Header("Unlock")]
+    public bool isUnlocked = true; // set true when flashlight is picked up
 
     private int hiddenLayer;
-    private bool onCooldown;
-
-    [Header("Unlock")]
-    public bool isUnlocked = true;   // becomes true when player picks up flashlight
-
+    private bool isScanning = false;
 
     void Awake()
     {
@@ -31,46 +23,50 @@ public class ScannerFlashEffect : MonoBehaviour
         hiddenLayer = LayerMask.NameToLayer(hiddenLayerName);
     }
 
-
     void Start()
     {
-        // Ensure hidden pieces are invisible by default
+        // Hidden by default
         cam.cullingMask &= ~(1 << hiddenLayer);
 
-        if (scannerLight != null) scannerLight.enabled = false;
+        if (scannerLight != null)
+            scannerLight.enabled = false;
     }
 
     void Update()
     {
-        //if (!isUnlocked) return;
+        if (!isUnlocked)
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+                Debug.Log("Scanner locked. Pick up the flashlight first.");
+            return;
+        }
 
-        if (Input.GetKeyDown(flashKey) && !onCooldown)
-            StartCoroutine(FlashRoutine());
+        if (Input.GetKeyDown(KeyCode.F))
+            ToggleScanner();
     }
 
-    IEnumerator FlashRoutine()
+    void ToggleScanner()
     {
-        onCooldown = true;
+        isScanning = !isScanning;
 
-        // 1) Turn on light
-        if (scannerLight != null) scannerLight.enabled = true;
+        if (isScanning)
+        {
+            // ON
+            cam.cullingMask |= (1 << hiddenLayer);
 
-        // 2) Play SFX
-        audioSource.PlayOneShot(flashSfx);
+            if (scannerLight != null)
+                scannerLight.enabled = true;
 
+            if (audioSource != null && flashSfx != null)
+                audioSource.PlayOneShot(flashSfx);
+        }
+        else
+        {
+            // OFF
+            cam.cullingMask &= ~(1 << hiddenLayer);
 
-        // 3) Reveal hidden pieces
-        cam.cullingMask |= (1 << hiddenLayer);
-
-        // Keep scan active
-        yield return new WaitForSeconds(flashDuration);
-
-        // 4) Hide pieces + turn off light
-        cam.cullingMask &= ~(1 << hiddenLayer);
-        if (scannerLight != null) scannerLight.enabled = false;
-
-        // Cooldown
-        yield return new WaitForSeconds(cooldown);
-        onCooldown = false;
+            if (scannerLight != null)
+                scannerLight.enabled = false;
+        }
     }
 }
