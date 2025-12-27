@@ -2,26 +2,26 @@ using UnityEngine;
 
 public class PuzzleManager : MonoBehaviour
 {
-    public CubePiece[] cubes; // Drag the 9 cubes here
+    public CubePiece[] cubes; // drag the 9 cubes here
 
     void Update()
     {
-        bool allCorrect = true;
+        CheckPuzzle();
+    }
 
-        foreach (CubePiece cube in cubes)
+    void CheckPuzzle()
+    {
+        foreach (var cube in cubes)
         {
             if (!cube.IsCorrect())
             {
-                allCorrect = false;
-                break;
+                return; // if one is wrong, stop
             }
         }
 
-        if (allCorrect)
-        {
-            Debug.Log("WIN! Puzzle Completed!");
-            // You can call here animation, UI, sound, etc.
-            enabled = false; // stop checking after win
-        }
+        // If we reach here -> all are correct
+        Debug.Log("WIN! Image Completed!");
+        // disable manager so it doesn't spam
+        enabled = false;
     }
 }

@@ -10,10 +10,16 @@ public class CubePiece : MonoBehaviour
 
         Debug.Log("Current Rotation: " + current + " | Correct Rotation: " + correctRotation);
 
-        // Allow a little margin to avoid floats issues
-        return Mathf.Abs(Mathf.DeltaAngle(current.x, correctRotation.x)) < 1f &&
-               Mathf.Abs(Mathf.DeltaAngle(current.y, correctRotation.y)) < 1f &&
-               Mathf.Abs(Mathf.DeltaAngle(current.z, correctRotation.z)) < 1f;
 
+        // Direct comparison
+        //// Allow a little margin to avoid floats issues
+        //return Mathf.Abs(Mathf.DeltaAngle(current.x, correctRotation.x)) < 1f &&
+        //       Mathf.Abs(Mathf.DeltaAngle(current.y, correctRotation.y)) < 1f &&
+        //       Mathf.Abs(Mathf.DeltaAngle(current.z, correctRotation.z)) < 1f;
+
+        // Compare snapped rotations (0, 90, 180, 270)
+        return Mathf.Round(current.x) == Mathf.Round(correctRotation.x) &&
+               Mathf.Round(current.y) == Mathf.Round(correctRotation.y) &&
+               Mathf.Round(current.z) == Mathf.Round(correctRotation.z);
     }
 }
