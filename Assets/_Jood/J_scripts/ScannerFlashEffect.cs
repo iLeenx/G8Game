@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class ScannerFlashEffect : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class ScannerFlashEffect : MonoBehaviour
 
     private int hiddenLayer;
     private bool isScanning = false;
+
+    public TextMeshProUGUI promptText;
+
 
     void Awake()
     {
@@ -42,7 +46,10 @@ public class ScannerFlashEffect : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.F))
+        {
+            promptText.gameObject.SetActive(false);
             ToggleScanner();
+        }
     }
 
     void ToggleScanner()
