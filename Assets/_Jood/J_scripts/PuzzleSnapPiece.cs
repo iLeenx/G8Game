@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PuzzleSnapPiece : MonoBehaviour
 {
@@ -16,11 +17,20 @@ public class PuzzleSnapPiece : MonoBehaviour
 
     public bool IsSnapped { get; private set; }
 
+    public PuzzleCompletionChecker checker;
+
+
     void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
         // Captures the solved layout rotation/position at play start
         correctPos = transform.position;
         correctRot = transform.rotation;
+
+        if (checker == null)
+            checker = Object.FindFirstObjectByType<PuzzleCompletionChecker>();
     }
 
     public void TrySnap()
@@ -50,6 +60,10 @@ public class PuzzleSnapPiece : MonoBehaviour
         transform.rotation = correctRot;
 
         IsSnapped = true;
+
+        if (checker != null)
+            checker.NotifyPieceSnapped();
+
 
         if (lockAfterSnap)
         {

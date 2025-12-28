@@ -295,6 +295,7 @@ MonoBehaviour:
   lockAfterSnap: 1
   requireCorrectRotation: 1
   angleTolerance: 5
+  checker: {fileID: 0}
 --- !u!1 &336896204
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,6 +441,7 @@ MonoBehaviour:
   lockAfterSnap: 1
   requireCorrectRotation: 1
   angleTolerance: 5
+  checker: {fileID: 0}
 --- !u!1 &359652448
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,6 +649,7 @@ MonoBehaviour:
   lockAfterSnap: 1
   requireCorrectRotation: 1
   angleTolerance: 5
+  checker: {fileID: 0}
 --- !u!1 &539920233
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,6 +938,7 @@ MonoBehaviour:
   lockAfterSnap: 1
   requireCorrectRotation: 1
   angleTolerance: 5
+  checker: {fileID: 0}
 --- !u!1 &848834027
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,6 +1115,7 @@ MonoBehaviour:
   lockAfterSnap: 1
   requireCorrectRotation: 1
   angleTolerance: 5
+  checker: {fileID: 0}
 --- !u!1 &944589611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1479,6 +1484,7 @@ MonoBehaviour:
   lockAfterSnap: 1
   requireCorrectRotation: 1
   angleTolerance: 5
+  checker: {fileID: 0}
 --- !u!1 &1482208615
 GameObject:
   m_ObjectHideFlags: 0
@@ -1624,6 +1630,7 @@ MonoBehaviour:
   lockAfterSnap: 1
   requireCorrectRotation: 1
   angleTolerance: 5
+  checker: {fileID: 0}
 --- !u!1 &1795267221
 GameObject:
   m_ObjectHideFlags: 0
@@ -1800,6 +1807,7 @@ MonoBehaviour:
   lockAfterSnap: 1
   requireCorrectRotation: 1
   angleTolerance: 5
+  checker: {fileID: 0}
 --- !u!1 &1966552240
 GameObject:
   m_ObjectHideFlags: 0
@@ -2209,6 +2217,7 @@ MonoBehaviour:
   lockAfterSnap: 1
   requireCorrectRotation: 1
   angleTolerance: 5
+  checker: {fileID: 0}
 --- !u!1 &2111372099
 GameObject:
   m_ObjectHideFlags: 0
@@ -2220,6 +2229,7 @@ GameObject:
   - component: {fileID: 2111372100}
   - component: {fileID: 2111372101}
   - component: {fileID: 2111372102}
+  - component: {fileID: 2111372103}
   m_Layer: 0
   m_Name: PuzzleManager
   m_TagString: Untagged
@@ -2287,6 +2297,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Grabber
   dragHeight: 0.25
+--- !u!114 &2111372103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111372099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ebc73d1bb35a994392e63347996d77f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuzzleCompletionChecker
+  pieces: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
