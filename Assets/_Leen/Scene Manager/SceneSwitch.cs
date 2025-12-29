@@ -41,8 +41,9 @@ public class SceneSwitch : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    public void OnApplicationQuit()
+    public void Quit()
     {
+        Debug.Log("Quit");
         Application.Quit();
     }
 
