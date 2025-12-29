@@ -4043,6 +4043,11 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &1538404055 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1270986150289961848, guid: bc0050bc57865b746841c2afbb7f32f3, type: 3}
+  m_PrefabInstance: {fileID: 2064829281}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1544170467
 GameObject:
   m_ObjectHideFlags: 0
@@ -5392,6 +5397,10 @@ PrefabInstance:
       propertyPath: ruby
       value: 
       objectReference: {fileID: 1203951175}
+    - target: {fileID: 245202857547450904, guid: 4c75b05f4dcbcd549b719296584473e3, type: 3}
+      propertyPath: flashlight
+      value: 
+      objectReference: {fileID: 1538404055}
     - target: {fileID: 245202857547450904, guid: 4c75b05f4dcbcd549b719296584473e3, type: 3}
       propertyPath: lasers.Array.size
       value: 3
