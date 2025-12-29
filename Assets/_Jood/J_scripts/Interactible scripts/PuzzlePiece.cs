@@ -6,6 +6,8 @@ public class PuzzlePiece : MonoBehaviour, IInteractable
     public Outline outline;
     public TextMeshProUGUI promptText;
 
+    public int pieceID;
+
     void Awake()
     {
         outline = GetComponent<Outline>();
@@ -29,6 +31,9 @@ public class PuzzlePiece : MonoBehaviour, IInteractable
     {
         ThirdGameManager.Instance.CollectPiece();
         promptText.gameObject.SetActive(false);
+
+        JigsawStateManager.piecesCollected[pieceID] = true;
+
         Destroy(gameObject);
     }
 }
