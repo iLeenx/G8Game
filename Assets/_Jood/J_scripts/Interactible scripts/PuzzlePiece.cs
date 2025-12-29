@@ -27,6 +27,7 @@ public class PuzzlePiece : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        ThirdGameManager.Instance.CollectPiece();
         promptText.gameObject.SetActive(false);
         Destroy(gameObject);
     }
