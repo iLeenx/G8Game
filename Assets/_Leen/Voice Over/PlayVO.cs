@@ -15,6 +15,8 @@ public class PlayVO : MonoBehaviour
 
     IEnumerator PlaySequence()
     {
+        yield return new WaitForSeconds(2f);
+
         // play first line
         voiceManager.PlayVoice(introLine);
 
