@@ -1,29 +1,57 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+
+[System.Serializable]
+public class VoiceLineData
+{
+    public VoiceLine line;      // the audio + subtitle
+    public float delayAfter;    // how long to wait after this line finishes
+}
 
 public class PlayVO : MonoBehaviour
 {
-    public VoiceLine introLine;
-    public VoiceLine doorTutorialLine;
-
+    public List<VoiceLineData> voiceLines = new List<VoiceLineData>();
     public VoiceManager voiceManager;
 
-    void Start()
+    private bool isPlaying = false;
+
+    public bool DestroyAfterPlay = false;
+
+    public void PlaySequence()
     {
-        StartCoroutine(PlaySequence());
+        if (!isPlaying)
+            StartCoroutine(PlaySequenceCoroutine());
     }
 
-    IEnumerator PlaySequence()
+    private IEnumerator PlaySequenceCoroutine()
     {
-        yield return new WaitForSeconds(2f);
+        isPlaying = true;
 
-        // play first line
-        voiceManager.PlayVoice(introLine);
+        foreach (var data in voiceLines)
+        {
+            if (data.line == null) continue;
 
-        // wait for that audio to finish + 3 seconds
-        yield return new WaitForSeconds(voiceManager.audioSource.clip.length + 3f);
+            // play the line
+            voiceManager.PlayVoice(data.line);
 
-        // play next line
-        voiceManager.PlayVoice(doorTutorialLine);
+            // wait for the clip length + extra delay
+            float duration = (data.line.audio != null ? data.line.audio.length : 0f) + data.delayAfter;
+            yield return new WaitForSeconds(duration);
+        }
+
+        isPlaying = false;
+
+        if (DestroyAfterPlay)
+        {
+            yield return new WaitForSeconds(0.7f);
+            Destroy(gameObject);
+        }   
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!isPlaying)
+            StartCoroutine(PlaySequenceCoroutine());
     }
 }

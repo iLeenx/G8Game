@@ -10,6 +10,7 @@ public class VoiceManager : MonoBehaviour
     private void Start()
     {
         subtitleDisplay.SetActive(false);
+        subtitleText.text = "";
     }
 
     public void PlayVoice(VoiceLine line)
