@@ -64,8 +64,10 @@ public class ScannerFlashEffect : MonoBehaviour
             if (scannerLight != null)
                 scannerLight.enabled = true;
 
-            if (audioSource != null && flashSfx != null)
-                audioSource.PlayOneShot(flashSfx);
+            //if (audioSource != null && flashSfx != null)
+            //    audioSource.PlayOneShot(flashSfx);
+
+            AudioManager.instance.playSFX("Flash");
         }
         else
         {
