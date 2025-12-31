@@ -1,10 +1,16 @@
 using UnityEngine;
+using System.Collections;
 
 public class RubyPickup : MonoBehaviour
 {
     private bool canPickUp = false;
     public GameObject pickUpPanel;
     public GameObject rubyInHand = null;
+
+    public VoiceLine RubyStolenLine;
+    public VoiceLine pickUpLine;
+
+    public VoiceManager voiceManager;
 
     private void Start()
     {
@@ -17,6 +23,8 @@ public class RubyPickup : MonoBehaviour
         if (other.CompareTag("Player")) 
             canPickUp = true;
             pickUpPanel.SetActive(true);
+        StartCoroutine(PlaySequence2());
+
 
     }
 
@@ -33,6 +41,8 @@ public class RubyPickup : MonoBehaviour
         {
             Debug.Log("Ruby Stolen!");
 
+            StartCoroutine(PlaySequence1());
+
             if (rubyInHand != null)
             {
                 rubyInHand.SetActive(true);
@@ -40,5 +50,32 @@ public class RubyPickup : MonoBehaviour
 
             Destroy(gameObject); // or start cutscene
         }
+    }
+
+    IEnumerator PlaySequence1()
+    {
+        yield return new WaitForSeconds(2f);
+
+        // play first line
+        voiceManager.PlayVoice(RubyStolenLine);
+
+        // wait for that audio to finish + 3 seconds
+        yield return new WaitForSeconds(voiceManager.audioSource.clip.length + 3f);
+
+        //// play next line
+        //voiceManager.PlayVoice(doorTutorialLine);
+    }
+    IEnumerator PlaySequence2()
+    {
+        yield return new WaitForSeconds(2f);
+
+        // play first line
+        voiceManager.PlayVoice(pickUpLine);
+
+        // wait for that audio to finish + 3 seconds
+        yield return new WaitForSeconds(voiceManager.audioSource.clip.length + 3f);
+
+        //// play next line
+        //voiceManager.PlayVoice(doorTutorialLine);
     }
 }
