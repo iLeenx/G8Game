@@ -9,7 +9,16 @@ public class VoiceManager : MonoBehaviour
 
     private void Start()
     {
-        subtitleDisplay.SetActive(false);
+        if (audioSource == null)
+        {
+            GameObject sfxObject = GameObject.Find("SFX Source");
+            if (sfxObject != null)
+            {
+                audioSource = sfxObject.GetComponent<AudioSource>();
+            }
+        }
+
+                subtitleDisplay.SetActive(false);
         subtitleText.text = "";
     }
 

@@ -637,67 +637,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5527789834133457646, guid: a6ec480a711ac4f4eab1a0e6d9588862, type: 3}
---- !u!1001 &59626066
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1958799272131835563, guid: cbc5448cab6b456488ae4fb2688551ca, type: 3}
-      propertyPath: m_Name
-      value: Audio Manager
-      objectReference: {fileID: 0}
-    - target: {fileID: 3258556893143470937, guid: cbc5448cab6b456488ae4fb2688551ca, type: 3}
-      propertyPath: m_Volume
-      value: 0.006
-      objectReference: {fileID: 0}
-    - target: {fileID: 5974472893052624111, guid: cbc5448cab6b456488ae4fb2688551ca, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.57804
-      objectReference: {fileID: 0}
-    - target: {fileID: 5974472893052624111, guid: cbc5448cab6b456488ae4fb2688551ca, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5974472893052624111, guid: cbc5448cab6b456488ae4fb2688551ca, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 4.23104
-      objectReference: {fileID: 0}
-    - target: {fileID: 5974472893052624111, guid: cbc5448cab6b456488ae4fb2688551ca, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5974472893052624111, guid: cbc5448cab6b456488ae4fb2688551ca, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5974472893052624111, guid: cbc5448cab6b456488ae4fb2688551ca, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5974472893052624111, guid: cbc5448cab6b456488ae4fb2688551ca, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5974472893052624111, guid: cbc5448cab6b456488ae4fb2688551ca, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5974472893052624111, guid: cbc5448cab6b456488ae4fb2688551ca, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5974472893052624111, guid: cbc5448cab6b456488ae4fb2688551ca, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: cbc5448cab6b456488ae4fb2688551ca, type: 3}
 --- !u!1 &59731792 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1005879279673908761, guid: 78a2979f88a1b0343b90fcf769585ff4, type: 3}
@@ -6202,11 +6141,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!82 &385067302 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 3517831984107159112, guid: cbc5448cab6b456488ae4fb2688551ca, type: 3}
-  m_PrefabInstance: {fileID: 59626066}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &390295530 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5719626907796861595, guid: 78a2979f88a1b0343b90fcf769585ff4, type: 3}
@@ -32898,7 +32832,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 529c51d63740ed44c837c4876d13632d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RotateOn
-  rotationSpeed: 50
+  rotateX: 0
+  rotateY: 0
+  rotateZ: 0
+  rotationSpeedY: 50
+  rotationSpeedX: 50
+  rotationSpeedZ: 50
+  hover: 0
+  hoverHeight: 0.5
+  hoverSpeed: 2
 --- !u!1 &1790484481 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6241935443573072359, guid: 78a2979f88a1b0343b90fcf769585ff4, type: 3}
@@ -38733,7 +38675,7 @@ PrefabInstance:
     - target: {fileID: 8940918074170679839, guid: 23dd67f06573c5640875dfa51605f2e8, type: 3}
       propertyPath: audioSource
       value: 
-      objectReference: {fileID: 385067302}
+      objectReference: {fileID: 0}
     - target: {fileID: 8940918074170679839, guid: 23dd67f06573c5640875dfa51605f2e8, type: 3}
       propertyPath: subtitleText
       value: 
@@ -40343,7 +40285,6 @@ SceneRoots:
   - {fileID: 676222143}
   - {fileID: 1423978328}
   - {fileID: 1057671077}
-  - {fileID: 59626066}
   - {fileID: 1235463669}
   - {fileID: 7280360444333572255}
   - {fileID: 535279257}
