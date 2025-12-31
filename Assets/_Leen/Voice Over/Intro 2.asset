@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Intro 2
   m_EditorClassIdentifier: Assembly-CSharp::VoiceLine
   audio: {fileID: 8300000, guid: 708609654e595ba4a9019369b40006e9, type: 3}
-  subtitleText: hello _ this is 2
+  subtitleText: "Dan: Alright\u2026 there it is. The diamond"
