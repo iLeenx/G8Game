@@ -37,7 +37,7 @@ public class SceneSwitch : MonoBehaviour
 
     public void _GoHowTo()
     {
-        SceneManager.LoadScene("How to");
+        SceneManager.LoadScene("How To");
         Cursor.visible = true;
         Time.timeScale = 1f;
     }
