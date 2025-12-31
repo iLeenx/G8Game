@@ -17,6 +17,10 @@ public class Player : MonoBehaviour
     private CharacterController controller;
     private float verticalVelocity;
 
+    // audio
+    public float footstepDelay = 1f;  // adjust for speed
+    private float footstepTimer = 0f;
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -44,6 +48,8 @@ public class Player : MonoBehaviour
             verticalVelocity = -2f; // keeps player grounded
         }
 
+        StepsSFX();
+
         verticalVelocity += gravity * Time.deltaTime;
         move.y = verticalVelocity;
 
@@ -61,5 +67,28 @@ public class Player : MonoBehaviour
         verticalRotation = Mathf.Clamp(verticalRotation, -90f, 90f);
 
         cameraTransform.localRotation = Quaternion.Euler(verticalRotation, 0, 0);
+    }
+
+    private void StepsSFX()
+    {
+        if (controller.isGrounded && moveHorizontal != 0 || moveForward != 0)
+        {
+
+            footstepTimer -= Time.fixedDeltaTime;
+
+            if (footstepTimer <= 0f)
+            {
+                AudioManager.instance.playSFX("Step");
+                footstepTimer = footstepDelay;
+            }
+
+            //AudioManager.instance.playSFX("Step");
+
+            //if (!audioSource.isPlaying && isGrounded)
+            //{
+            //    audioSource.Play();
+            //}
+
+        }
     }
 }

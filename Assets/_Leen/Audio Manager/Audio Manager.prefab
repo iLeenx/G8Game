@@ -50,8 +50,10 @@ MonoBehaviour:
   - name: BGM
     clip: {fileID: 8300000, guid: e92cefb268f9fd746a5dfb5cc6613ccc, type: 3}
   sfxSounds:
-  - name: 
-    clip: {fileID: 0}
+  - name: Step
+    clip: {fileID: 8300000, guid: e8a161a75dffcf04994651785f814b6f, type: 3}
+  - name: Flash
+    clip: {fileID: 8300000, guid: 212089338ff7e4347a77004b27b0f5ef, type: 3}
   musicSource: {fileID: 3258556893143470937}
   sfxSource: {fileID: 3517831984107159112}
 --- !u!1 &3716898446957218952
@@ -99,7 +101,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.071
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -228,7 +230,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.077
   m_Pitch: 1
   Loop: 0
   Mute: 0
