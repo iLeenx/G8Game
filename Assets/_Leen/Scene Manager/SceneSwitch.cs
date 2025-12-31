@@ -12,6 +12,7 @@ public class SceneSwitch : MonoBehaviour
     }
     public void _GoPlay()
     {
+        CutsceneOnce.ResetForNewGame();
         SceneManager.LoadScene("Game 1");
 
         Cursor.visible = true;

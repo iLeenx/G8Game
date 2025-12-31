@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: cutscene
   m_EditorClassIdentifier: Assembly-CSharp::VoiceLine
   audio: {fileID: 8300000, guid: e4b4df9e9df56e3478d79481ed9d742d, type: 3}
-  subtitleText: 'Player: Are you sure this is a good idea?'
+  subtitleText: 'Dan: Are you sure this is a good idea?'
