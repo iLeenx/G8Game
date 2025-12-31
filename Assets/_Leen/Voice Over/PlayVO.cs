@@ -18,6 +18,14 @@ public class PlayVO : MonoBehaviour
 
     public bool DestroyAfterPlay = false;
 
+    private void Start()
+    {
+        if (voiceManager == null)
+        {
+            voiceManager = FindFirstObjectByType<VoiceManager>();
+        }
+    }
+
     public void PlaySequence()
     {
         if (!isPlaying)
