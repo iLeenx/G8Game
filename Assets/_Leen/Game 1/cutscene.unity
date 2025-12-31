@@ -17316,9 +17316,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 881dcbf8aa7ebe74d8963e1d385fd12b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleGate
-  puzzleSceneName: ThirdGame
+  doorAnimator: {fileID: 0}
+  openTriggerName: Open
+  gateTrigger: {fileID: 0}
   messageText: {fileID: 929892760}
   messageTime: 2
+  lockedJohnLine: {fileID: 0}
+  lockedDanLine: {fileID: 0}
+  openJohnLine: {fileID: 0}
+  openDanLine: {fileID: 0}
+  voiceManager: {fileID: 0}
 --- !u!1 &1022752436 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4389533643800952226, guid: 78a2979f88a1b0343b90fcf769585ff4, type: 3}
@@ -20234,6 +20241,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RubyPickup
   pickUpPanel: {fileID: 96220247}
   rubyInHand: {fileID: 949924185}
+  RubyStolenLine: {fileID: 0}
+  pickUpLine: {fileID: 0}
+  voiceManager: {fileID: 0}
 --- !u!1 &1204161515 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4943967341540063013, guid: 78a2979f88a1b0343b90fcf769585ff4, type: 3}
@@ -22403,15 +22413,15 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 76.878, y: 12.718, z: 13.14}
-  - {x: 76.85682, y: 12.058714, z: 13.148266}
-  - {x: 76.83514, y: 11.383655, z: 13.156731}
-  - {x: 76.812935, y: 10.692819, z: 13.16539}
-  - {x: 76.790245, y: 9.986211, z: 13.174248}
-  - {x: 76.76703, y: 9.263829, z: 13.183304}
-  - {x: 76.74331, y: 8.525673, z: 13.192557}
-  - {x: 76.7191, y: 7.7717443, z: 13.202009}
-  - {x: 76.69437, y: 7.002041, z: 13.211659}
-  - {x: 76.669136, y: 6.216564, z: 13.221505}
+  - {x: 76.856636, y: 12.051234, z: 13.134754}
+  - {x: 76.83481, y: 11.3703575, z: 13.1327095}
+  - {x: 76.812515, y: 10.675366, z: 13.133863}
+  - {x: 76.78976, y: 9.966266, z: 13.138218}
+  - {x: 76.766525, y: 9.2430525, z: 13.145773}
+  - {x: 76.74283, y: 8.505728, z: 13.1565275}
+  - {x: 76.71867, y: 7.754292, z: 13.170483}
+  - {x: 76.694046, y: 6.9887443, z: 13.187639}
+  - {x: 76.66895, y: 6.209085, z: 13.207994}
   - {x: 76.643394, y: 5.4153132, z: 13.23155}
   m_Parameters:
     serializedVersion: 3
@@ -22567,7 +22577,7 @@ Transform:
   m_GameObject: {fileID: 1292791318}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 76.77963, y: 9.655875, z: 13.1783905}
+  m_LocalPosition: {x: 76.77913, y: 9.635341, z: 13.141296}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -40297,6 +40307,10 @@ PrefabInstance:
       propertyPath: voiceManager
       value: 
       objectReference: {fileID: 1767663315}
+    - target: {fileID: 4327305098731204211, guid: 140f68be27f9b6a45a01f2148405cfd4, type: 3}
+      propertyPath: doorTutorialLine
+      value: 
+      objectReference: {fileID: 11400000, guid: 43aaa00ed1e9e0145abd72beb588b313, type: 2}
     - target: {fileID: 7396476213069847466, guid: 140f68be27f9b6a45a01f2148405cfd4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

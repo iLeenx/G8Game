@@ -15,13 +15,13 @@ public class PlayVOStart : MonoBehaviour
 
     IEnumerator PlaySequence()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.5f);
 
         // play first line
         voiceManager.PlayVoice(introLine);
 
-        // wait for that audio to finish + 3 seconds
-        yield return new WaitForSeconds(voiceManager.audioSource.clip.length + 3f);
+        // wait for that audio to finish + 1 seconds
+        yield return new WaitForSeconds(voiceManager.audioSource.clip.length + 1f);
 
         // play next line
         voiceManager.PlayVoice(doorTutorialLine);

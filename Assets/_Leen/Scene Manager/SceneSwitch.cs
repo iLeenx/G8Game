@@ -19,6 +19,15 @@ public class SceneSwitch : MonoBehaviour
         Time.timeScale = 1f;
     }
 
+    public void _BackPlay()
+    {
+        CutsceneOnce.ResetForNewGame();
+        SceneManager.LoadScene("Game 1");
+
+        Cursor.visible = true;
+        Time.timeScale = 1f;
+    }
+
     public void _GoSettings()
     {
         SceneManager.LoadScene("Settings");

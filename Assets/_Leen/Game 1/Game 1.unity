@@ -14926,7 +14926,7 @@ GameObject:
   - component: {fileID: 818345663}
   - component: {fileID: 818345667}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32365,7 +32365,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayVO
   voiceLines:
-  - line: {fileID: 11400000, guid: 732d53f7676dfcd4781c1ead7ea70669, type: 2}
+  - line: {fileID: 11400000, guid: e4a612f492b634244bb5393cc80d3d07, type: 2}
+    delayAfter: 0
+  - line: {fileID: 11400000, guid: 7aa654ef02e929148b5f304a75de2867, type: 2}
     delayAfter: 0
   voiceManager: {fileID: 0}
   DestroyAfterPlay: 0
@@ -43540,7 +43542,7 @@ PrefabInstance:
     - target: {fileID: 4327305098731204211, guid: 140f68be27f9b6a45a01f2148405cfd4, type: 3}
       propertyPath: introLine
       value: 
-      objectReference: {fileID: 11400000, guid: 83a9a20ba454d184da945702d0ecc676, type: 2}
+      objectReference: {fileID: 11400000, guid: 66bba00fe10248a42b5cd8f93b5c38da, type: 2}
     - target: {fileID: 4327305098731204211, guid: 140f68be27f9b6a45a01f2148405cfd4, type: 3}
       propertyPath: middleLine
       value: 
@@ -43549,6 +43551,10 @@ PrefabInstance:
       propertyPath: voiceManager
       value: 
       objectReference: {fileID: 1767663315}
+    - target: {fileID: 4327305098731204211, guid: 140f68be27f9b6a45a01f2148405cfd4, type: 3}
+      propertyPath: doorTutorialLine
+      value: 
+      objectReference: {fileID: 11400000, guid: b8c608bb0072fcc4594749e48c3743d6, type: 2}
     - target: {fileID: 7396476213069847466, guid: 140f68be27f9b6a45a01f2148405cfd4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
