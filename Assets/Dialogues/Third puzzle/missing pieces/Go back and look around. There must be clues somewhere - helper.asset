@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 792f44b0e94446347934fab0e995ab79, type: 3}
+  m_Name: Go back and look around. There must be clues somewhere - helper
+  m_EditorClassIdentifier: Assembly-CSharp::VoiceLine
+  audio: {fileID: 8300000, guid: f5173f12256f45c4faba213016f65d29, type: 3}
+  subtitleText: 'John: Go back and look around. There must be clues somewhere'
