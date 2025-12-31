@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: "That scanner should help you see things you couldn\u2019t see before.
     - helper"
   m_EditorClassIdentifier: Assembly-CSharp::VoiceLine
-  audio: {fileID: 8300000, guid: af5695d0bc82a7d42a7a1f55a0694643, type: 3}
+  audio: {fileID: 8300000, guid: 414d1583b46421241a3189c184ee578d, type: 3}
   subtitleText: "John: That scanner should help you see things you couldn\u2019t
     see before."
