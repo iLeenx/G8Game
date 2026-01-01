@@ -3,7 +3,7 @@ using System.Collections;
 
 public class RubyPickup : MonoBehaviour
 {
-    private bool canPickUp = false;
+    public bool canPickUp = false;
     public GameObject pickUpPanel;
     public GameObject rubyInHand = null;
     public GameObject escapePanel;
@@ -57,8 +57,8 @@ public class RubyPickup : MonoBehaviour
                 pickUpPanel.SetActive(false);
                 escapePanel.SetActive(true);
 
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
+                //Cursor.lockState = CursorLockMode.None;
+                //Cursor.visible = true;
 
             }
 
