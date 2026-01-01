@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   musicSounds:
   - name: BGM
-    clip: {fileID: 8300000, guid: e92cefb268f9fd746a5dfb5cc6613ccc, type: 3}
+    clip: {fileID: 8300000, guid: a4243ce46e8871f47aece42e6b32a3cb, type: 3}
   sfxSounds:
   - name: Step
     clip: {fileID: 8300000, guid: e8a161a75dffcf04994651785f814b6f, type: 3}
@@ -103,7 +103,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.01
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
