@@ -143,6 +143,7 @@ GameObject:
   - component: {fileID: 3961888797071065829}
   - component: {fileID: 1371663829145105501}
   - component: {fileID: 6540048996018128958}
+  - component: {fileID: 3558916767127172871}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -206,7 +207,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 119
+    m_Bits: 375
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -402,6 +403,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3558916767127172871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6042069076979949343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0daad83d757531d428499fd41712843b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LookUIInteract
+  interactDistance: 5
+  uiLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &6506505521621380480
 GameObject:
   m_ObjectHideFlags: 0
@@ -660,6 +677,7 @@ MonoBehaviour:
   mouseSensitivity: 2
   moveSpeed: 5
   gravity: -9.81
+  footstepDelay: 3
 --- !u!143 &8176574524617492397
 CharacterController:
   m_ObjectHideFlags: 0

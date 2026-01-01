@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 5017954897187926729}
   - component: {fileID: 4038310875243068706}
   - component: {fileID: 347539491605960762}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,7 +276,8 @@ GameObject:
   - component: {fileID: 556196581361895515}
   - component: {fileID: 1961536918029060164}
   - component: {fileID: 7754840942249486840}
-  m_Layer: 0
+  - component: {fileID: 3563824838888526003}
+  m_Layer: 8
   m_Name: Button - Anti Clock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -398,6 +399,27 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!65 &3563824838888526003
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2326087923997383511}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 30.41, y: 26.2, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3206255691973691992
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,7 +431,7 @@ GameObject:
   - component: {fileID: 3503933943166641521}
   - component: {fileID: 1513489118948482791}
   - component: {fileID: 652461572098618410}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -625,7 +647,8 @@ GameObject:
   - component: {fileID: 3655542793278806746}
   - component: {fileID: 7413236874821790889}
   - component: {fileID: 8431691669392768790}
-  m_Layer: 0
+  - component: {fileID: 8908657050611529865}
+  m_Layer: 8
   m_Name: Button - Clock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -747,6 +770,27 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!65 &8908657050611529865
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6406169780545586276}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 30.41, y: 26.2, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6462970741004323647
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,7 +802,7 @@ GameObject:
   - component: {fileID: 1520149785133314846}
   - component: {fileID: 4399118596226317347}
   - component: {fileID: 1507550683448032731}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -896,7 +940,7 @@ GameObject:
   - component: {fileID: 5502405490050517889}
   - component: {fileID: 1754973926161581653}
   - component: {fileID: 9032503191728159522}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -998,7 +1042,7 @@ GameObject:
   - component: {fileID: 1063760709615973200}
   - component: {fileID: 6715684484353979664}
   - component: {fileID: 447190579061614867}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}

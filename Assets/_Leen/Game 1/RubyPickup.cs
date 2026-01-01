@@ -6,6 +6,7 @@ public class RubyPickup : MonoBehaviour
     private bool canPickUp = false;
     public GameObject pickUpPanel;
     public GameObject rubyInHand = null;
+    public GameObject escapePanel;
 
     public VoiceLine RubyStolenLine;
     public VoiceLine pickUpLine;
@@ -14,8 +15,14 @@ public class RubyPickup : MonoBehaviour
 
     private void Start()
     {
+        if (voiceManager == null)
+        {
+            voiceManager = FindFirstObjectByType<VoiceManager>();
+        }
+
         pickUpPanel.SetActive(false);
         rubyInHand.SetActive(false);
+        escapePanel.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)
@@ -23,7 +30,8 @@ public class RubyPickup : MonoBehaviour
         if (other.CompareTag("Player")) 
             canPickUp = true;
             pickUpPanel.SetActive(true);
-        StartCoroutine(PlaySequence2());
+
+        StartCoroutine(PlaySequence1());
 
 
     }
@@ -41,11 +49,17 @@ public class RubyPickup : MonoBehaviour
         {
             Debug.Log("Ruby Stolen!");
 
-            StartCoroutine(PlaySequence1());
+            StartCoroutine(PlaySequence2());
 
             if (rubyInHand != null)
             {
                 rubyInHand.SetActive(true);
+                pickUpPanel.SetActive(false);
+                escapePanel.SetActive(true);
+
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+
             }
 
             Destroy(gameObject); // or start cutscene
