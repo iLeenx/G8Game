@@ -397,7 +397,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Puzzle Game
+  m_text: Heist Squad
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a73f8c0e39724c429cd7b2df0e4dbf3, type: 2}
   m_sharedMaterial: {fileID: 6174206180415577701, guid: 5a73f8c0e39724c429cd7b2df0e4dbf3, type: 2}
