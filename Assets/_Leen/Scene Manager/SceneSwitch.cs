@@ -13,7 +13,7 @@ public class SceneSwitch : MonoBehaviour
     public void _GoPlay()
     {
         CutsceneOnce.ResetForNewGame();
-        SceneManager.LoadScene("cutscene");
+        SceneManager.LoadScene("cutscene 2");
 
         Cursor.visible = true;
         Time.timeScale = 1f;
