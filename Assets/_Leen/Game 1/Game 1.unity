@@ -4724,6 +4724,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube.028
       objectReference: {fileID: 0}
+    - target: {fileID: 8458057711640493451, guid: b3897d5a9bf39ab4bb1ff9cfcff7122c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 04658d95ed171954c8aa851dfb316540, type: 2}
+    - target: {fileID: 8458057711640493451, guid: b3897d5a9bf39ab4bb1ff9cfcff7122c, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 04658d95ed171954c8aa851dfb316540, type: 2}
+    - target: {fileID: 8458057711640493451, guid: b3897d5a9bf39ab4bb1ff9cfcff7122c, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 04658d95ed171954c8aa851dfb316540, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8772,6 +8784,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ModelRotateUVfix
       objectReference: {fileID: 0}
+    - target: {fileID: 3118385327283001838, guid: cbac3c30e13e80945a9c77317bd0bcc2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5675041248809987555, guid: 67587e4a635587543bb08fdf19616eb4, type: 3}
     - target: {fileID: 4343351467032030436, guid: cbac3c30e13e80945a9c77317bd0bcc2, type: 3}
       propertyPath: m_LocalScale.x
       value: 118.65
@@ -19619,6 +19635,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4841986050404053958, guid: cf1d2c1dbe0ff104086ba2e931edd876, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 04658d95ed171954c8aa851dfb316540, type: 2}
+    - target: {fileID: 4841986050404053958, guid: cf1d2c1dbe0ff104086ba2e931edd876, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 04658d95ed171954c8aa851dfb316540, type: 2}
+    - target: {fileID: 4841986050404053958, guid: cf1d2c1dbe0ff104086ba2e931edd876, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 04658d95ed171954c8aa851dfb316540, type: 2}
     - target: {fileID: 6907170105048642824, guid: cf1d2c1dbe0ff104086ba2e931edd876, type: 3}
       propertyPath: m_Name
       value: Cube.001
@@ -22283,6 +22311,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 57b9f41dbd44a6b4b97f5c50c1d24678, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5675041248809987555, guid: 67587e4a635587543bb08fdf19616eb4, type: 3}
     - target: {fileID: 919132149155446097, guid: 57b9f41dbd44a6b4b97f5c50c1d24678, type: 3}
       propertyPath: m_Name
       value: "\u0645\u062C\u0633\u0645 \u0639\u062F\u062F \u0645\u0646\u062E\u0641\u0636
@@ -32129,6 +32161,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4841986050404053958, guid: cf1d2c1dbe0ff104086ba2e931edd876, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 04658d95ed171954c8aa851dfb316540, type: 2}
+    - target: {fileID: 4841986050404053958, guid: cf1d2c1dbe0ff104086ba2e931edd876, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 04658d95ed171954c8aa851dfb316540, type: 2}
+    - target: {fileID: 4841986050404053958, guid: cf1d2c1dbe0ff104086ba2e931edd876, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 04658d95ed171954c8aa851dfb316540, type: 2}
     - target: {fileID: 6907170105048642824, guid: cf1d2c1dbe0ff104086ba2e931edd876, type: 3}
       propertyPath: m_Name
       value: Cube.001 (1)
@@ -37443,6 +37487,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6455f6b8a8947934eb2ea4b448c66788, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5675041248809987555, guid: 67587e4a635587543bb08fdf19616eb4, type: 3}
     - target: {fileID: 919132149155446097, guid: 6455f6b8a8947934eb2ea4b448c66788, type: 3}
       propertyPath: m_Name
       value: "\u0645\u062C\u0633\u0645 2 (1)"
@@ -43853,7 +43901,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 6499450573870658045, guid: 57b9f41dbd44a6b4b97f5c50c1d24678, type: 3}
+  - {fileID: -5117291494046985982, guid: a6ec480a711ac4f4eab1a0e6d9588862, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -43901,7 +43949,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -7872960035947366523, guid: 6455f6b8a8947934eb2ea4b448c66788, type: 3}
+  - {fileID: 5675041248809987555, guid: 67587e4a635587543bb08fdf19616eb4, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
