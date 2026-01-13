@@ -228,7 +228,7 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -237,6 +237,50 @@ TextureImporter:
       bones: []
       spriteID: 61d829a08c49d564e865b1978b27df54
       internalID: 1466816168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O5NY8C0_6
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 332
+        width: 450
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 926f2e7f1ede5ae4886abbf0d1825cc5
+      internalID: -2058133407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: O5NY8C0_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1300
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c46181d1c82abb94784a996e4801b211
+      internalID: -564350033
       vertices: []
       indices: 
       edges: []
@@ -261,6 +305,8 @@ TextureImporter:
       O5NY8C0_3: -317266274
       O5NY8C0_4: 271704039
       O5NY8C0_5: 1466816168
+      O5NY8C0_6: -2058133407
+      O5NY8C0_7: -564350033
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

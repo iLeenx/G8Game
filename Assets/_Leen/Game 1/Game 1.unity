@@ -2038,10 +2038,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 8228782520683309097, guid: 01af0b4d9505f61458c36124fbaeef5b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1794438099}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7087355154885273608, guid: 01af0b4d9505f61458c36124fbaeef5b, type: 3}
       insertIndex: -1
@@ -8369,11 +8366,6 @@ MonoBehaviour:
   hover: 0
   hoverHeight: 0.1
   hoverSpeed: 2
---- !u!4 &446547656 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8228782520683309097, guid: 01af0b4d9505f61458c36124fbaeef5b, type: 3}
-  m_PrefabInstance: {fileID: 111758288}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &448514561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20118,7 +20110,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: If you want to Go to rubiks cube scene press E
+  m_text: 'Museum Protection System
+
+    Press E to access.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -22912,7 +22906,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1195203833
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22946,14 +22940,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.34117648}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -2058133407, guid: 639a564e41bdaa444a74f509a1a101dd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -33704,7 +33698,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 6, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1639089549
 MeshRenderer:
@@ -36793,13 +36787,13 @@ Transform:
   m_GameObject: {fileID: 1794438095}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.88, z: 0}
-  m_LocalScale: {x: 9.374268, y: 4.687134, z: 9.374268}
+  m_LocalPosition: {x: 61.868, y: 2.967448, z: 18.957}
+  m_LocalScale: {x: 2, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 109967482}
   - {fileID: 1639089546}
-  m_Father: {fileID: 446547656}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1794692706 stripped
 GameObject:
@@ -46083,6 +46077,7 @@ SceneRoots:
   - {fileID: 104017190}
   - {fileID: 1998484014}
   - {fileID: 2098374927}
+  - {fileID: 1794438099}
   - {fileID: 111758288}
   - {fileID: 1403813196}
   - {fileID: 1292791324}
