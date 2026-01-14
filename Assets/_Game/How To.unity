@@ -179,8 +179,8 @@ MonoBehaviour:
   m_text: "WASD to move\nTurn off the lasers. Steal the diamond.\nYou\u2019ll figure
     out the rest."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5a73f8c0e39724c429cd7b2df0e4dbf3, type: 2}
-  m_sharedMaterial: {fileID: 6174206180415577701, guid: 5a73f8c0e39724c429cd7b2df0e4dbf3, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dd4c604cf07c2704f8c339425b51c3a7, type: 2}
+  m_sharedMaterial: {fileID: 3704889539419260238, guid: dd4c604cf07c2704f8c339425b51c3a7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: -46.47
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
@@ -614,9 +614,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Play Button
       objectReference: {fileID: 0}
+    - target: {fileID: 3818064063721824160, guid: 5a0f51f6d9a1fc34fafa40e284ad1d3c, type: 3}
+      propertyPath: m_Color.a
+      value: 0.8235294
+      objectReference: {fileID: 0}
     - target: {fileID: 6804883008430518537, guid: 5a0f51f6d9a1fc34fafa40e284ad1d3c, type: 3}
       propertyPath: m_text
       value: Start
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804883008430518537, guid: 5a0f51f6d9a1fc34fafa40e284ad1d3c, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: dd4c604cf07c2704f8c339425b51c3a7, type: 2}
+    - target: {fileID: 6804883008430518537, guid: 5a0f51f6d9a1fc34fafa40e284ad1d3c, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3704889539419260238, guid: dd4c604cf07c2704f8c339425b51c3a7, type: 2}
+    - target: {fileID: 6804883008430518537, guid: 5a0f51f6d9a1fc34fafa40e284ad1d3c, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7488601626056629824, guid: 5a0f51f6d9a1fc34fafa40e284ad1d3c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

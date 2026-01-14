@@ -17283,9 +17283,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 881dcbf8aa7ebe74d8963e1d385fd12b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleGate
-  puzzleSceneName: ThirdGame
+  doorAnimator: {fileID: 0}
+  openTriggerName: Open
+  gateTrigger: {fileID: 0}
   messageText: {fileID: 929892760}
   messageTime: 2
+  lockedJohnLine: {fileID: 0}
+  lockedDanLine: {fileID: 0}
+  openJohnLine: {fileID: 0}
+  openDanLine: {fileID: 0}
+  voiceManager: {fileID: 0}
 --- !u!1 &1022752436 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4389533643800952226, guid: 78a2979f88a1b0343b90fcf769585ff4, type: 3}
@@ -20149,8 +20156,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34c07bbf0d646c248ae20c75c9b78883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RubyPickup
+  canPickUp: 0
   pickUpPanel: {fileID: 96220247}
   rubyInHand: {fileID: 949924185}
+  escapePanel: {fileID: 0}
+  RubyStolenLine: {fileID: 0}
+  pickUpLine: {fileID: 0}
+  voiceManager: {fileID: 0}
 --- !u!1 &1204161515 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4943967341540063013, guid: 78a2979f88a1b0343b90fcf769585ff4, type: 3}
@@ -21088,8 +21100,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Sub titles here
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dd4c604cf07c2704f8c339425b51c3a7, type: 2}
+  m_sharedMaterial: {fileID: 3704889539419260238, guid: dd4c604cf07c2704f8c339425b51c3a7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

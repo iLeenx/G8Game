@@ -184,8 +184,8 @@ MonoBehaviour:
 
     Futun Alamri'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5a73f8c0e39724c429cd7b2df0e4dbf3, type: 2}
-  m_sharedMaterial: {fileID: 6174206180415577701, guid: 5a73f8c0e39724c429cd7b2df0e4dbf3, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dd4c604cf07c2704f8c339425b51c3a7, type: 2}
+  m_sharedMaterial: {fileID: 3704889539419260238, guid: dd4c604cf07c2704f8c339425b51c3a7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: -30.64
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
