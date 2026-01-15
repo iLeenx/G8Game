@@ -8193,12 +8193,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 423715461}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.018337792, y: -0.45311654, z: 0.009294021, w: 0.89121425}
-  m_LocalPosition: {x: -0, y: -0.611, z: 0.375}
+  m_LocalRotation: {x: -0.012134181, y: 0.0000005364418, z: 0.016595634, w: 0.9997887}
+  m_LocalPosition: {x: 76.632996, y: 1.3290002, z: 13.2239485}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1146419599}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &423715463
 SphereCollider:
@@ -18848,9 +18848,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3260057154184570422, guid: 390a032cbe33a114780e4fd960cfde1c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 949924189}
-    - targetCorrespondingSourceObject: {fileID: 629086393188839656, guid: 390a032cbe33a114780e4fd960cfde1c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 423715462}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6663573075337305894, guid: 390a032cbe33a114780e4fd960cfde1c, type: 3}
       insertIndex: -1
@@ -22924,11 +22921,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!4 &1146419599 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 629086393188839656, guid: 390a032cbe33a114780e4fd960cfde1c, type: 3}
-  m_PrefabInstance: {fileID: 972646516}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1146441265 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6608128288262737391, guid: 78a2979f88a1b0343b90fcf769585ff4, type: 3}
@@ -42334,7 +42326,6 @@ GameObject:
   - component: {fileID: 1997809033}
   - component: {fileID: 1997809032}
   - component: {fileID: 1997809031}
-  - component: {fileID: 1997809030}
   m_Layer: 0
   m_Name: Object_521 (1)
   m_TagString: Untagged
@@ -42358,28 +42349,6 @@ Transform:
   - {fileID: 262921229}
   m_Father: {fileID: 834224084}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1997809030
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1997809028}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6d830ccecaf490c46b473a9d6fd2fb01, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!64 &1997809031
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -47488,6 +47457,7 @@ SceneRoots:
   - {fileID: 2040702697}
   - {fileID: 576480698}
   - {fileID: 927470956}
+  - {fileID: 423715462}
   - {fileID: 972646516}
   - {fileID: 523999836}
   - {fileID: 532174545}
