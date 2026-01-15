@@ -5,6 +5,9 @@ public class UIController : MonoBehaviour
 {
     public Slider musicSlider;
     public Slider sfxSlider;
+    public Button musicButton;
+    public Button sfxButton;
+
     //public Slider playerSfxSlider;
 
     private void Start()
@@ -12,16 +15,21 @@ public class UIController : MonoBehaviour
         musicSlider.value = AudioManager.instance.musicSource.volume;
         sfxSlider.value = AudioManager.instance.sfxSource.volume;
         //playerSfxSlider.value = AudioManager.instance.playerSfxSource.volume;
+
+        UpdateMusicButtonColor();
+        UpdateSFXButtonColor();
     }
 
     public void ToggleMusic()
     {
         AudioManager.instance.ToggleMusic();
+        UpdateMusicButtonColor();
     }
 
     public void ToggleSFX()
     {
         AudioManager.instance.ToggleSFX();
+        UpdateSFXButtonColor();
     }
 
     public void TogglePlayerSFX()
@@ -42,4 +50,36 @@ public class UIController : MonoBehaviour
     {
         //AudioManager.instance.PlayerSFXVolume(playerSfxSlider.value);
     }
+
+    private void UpdateMusicButtonColor()
+    {
+        Color color;
+
+        if (AudioManager.instance.musicSource.mute)
+        {
+            ColorUtility.TryParseHtmlString("#AEA484", out color);
+        }
+        else
+        {
+            ColorUtility.TryParseHtmlString("#FFFFFF", out color);
+        }
+
+        musicButton.image.color = color;
+    }
+    private void UpdateSFXButtonColor()
+    {
+        Color color;
+
+        if (AudioManager.instance.sfxSource.mute)
+        {
+            ColorUtility.TryParseHtmlString("#AEA484", out color);
+        }
+        else
+        {
+            ColorUtility.TryParseHtmlString("#FFFFFF", out color);
+        }
+
+        sfxButton.image.color = color;
+    }
+
 }
