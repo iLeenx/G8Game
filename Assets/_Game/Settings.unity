@@ -259,6 +259,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8502971474635397974, guid: d3fde8bdde170b4428ec7825b2c2473f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.5489
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1123,6 +1127,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 1972678153, guid: 639a564e41bdaa444a74f509a1a101dd, type: 3}
+    - target: {fileID: 5231409523115490279, guid: 9fac420454bc81748a11fb928d03d592, type: 3}
+      propertyPath: m_text
+      value: Mute SFX
+      objectReference: {fileID: 0}
     - target: {fileID: 7229047427280964292, guid: 9fac420454bc81748a11fb928d03d592, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1767,7 +1775,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1777420311079434069, guid: 9fac420454bc81748a11fb928d03d592, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1.85
+      value: -1.8499985
       objectReference: {fileID: 0}
     - target: {fileID: 4770115806264010533, guid: 9fac420454bc81748a11fb928d03d592, type: 3}
       propertyPath: m_Type
@@ -2005,6 +2013,10 @@ PrefabInstance:
     - target: {fileID: 8502971474635397974, guid: d3fde8bdde170b4428ec7825b2c2473f, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8502971474635397974, guid: d3fde8bdde170b4428ec7825b2c2473f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.5489
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
