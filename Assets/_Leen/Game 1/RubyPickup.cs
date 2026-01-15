@@ -62,6 +62,9 @@ public class RubyPickup : MonoBehaviour
 
             }
 
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
             Destroy(gameObject); // or start cutscene
         }
     }

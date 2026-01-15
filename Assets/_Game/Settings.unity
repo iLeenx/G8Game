@@ -299,6 +299,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIController
   musicSlider: {fileID: 1928233504}
   sfxSlider: {fileID: 329794323}
+  musicButton: {fileID: 1660456678}
+  sfxButton: {fileID: 2143516273}
 --- !u!4 &33543012
 Transform:
   m_ObjectHideFlags: 0
@@ -1277,6 +1279,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78a2979f88a1b0343b90fcf769585ff4, type: 3}
+--- !u!114 &1660456678 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1464799078356795985, guid: 9fac420454bc81748a11fb928d03d592, type: 3}
+  m_PrefabInstance: {fileID: 3700495256020249456}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &1763223628
 GameObject:
   m_ObjectHideFlags: 0
@@ -1676,6 +1689,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7229047427280964292, guid: 9fac420454bc81748a11fb928d03d592, type: 3}
   m_PrefabInstance: {fileID: 1507032815}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2143516273 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1464799078356795985, guid: 9fac420454bc81748a11fb928d03d592, type: 3}
+  m_PrefabInstance: {fileID: 1507032815}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1001 &2460143091932063309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1785,6 +1809,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 1972678153, guid: 639a564e41bdaa444a74f509a1a101dd, type: 3}
+    - target: {fileID: 4770115806264010533, guid: 9fac420454bc81748a11fb928d03d592, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4770115806264010533, guid: 9fac420454bc81748a11fb928d03d592, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4770115806264010533, guid: 9fac420454bc81748a11fb928d03d592, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7229047427280964292, guid: 9fac420454bc81748a11fb928d03d592, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
