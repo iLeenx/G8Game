@@ -57,5 +57,13 @@ public class SceneSwitch : MonoBehaviour
         Application.Quit();
     }
 
+    public void _GoGame1()
+    {
+        CutsceneOnce.ResetForNewGame();
+        SceneManager.LoadScene("Game 1");
+
+        Cursor.visible = true;
+        Time.timeScale = 1f;
+    }
 
 }

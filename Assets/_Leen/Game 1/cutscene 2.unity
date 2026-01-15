@@ -20536,7 +20536,6 @@ GameObject:
   - component: {fileID: 1203951178}
   - component: {fileID: 1203951177}
   - component: {fileID: 1203951176}
-  - component: {fileID: 1203951180}
   m_Layer: 0
   m_Name: Ruby
   m_TagString: Untagged
@@ -20636,25 +20635,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1203951180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1203951175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34c07bbf0d646c248ae20c75c9b78883, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RubyPickup
-  canPickUp: 0
-  pickUpPanel: {fileID: 96220247}
-  rubyInHand: {fileID: 949924185}
-  escapePanel: {fileID: 0}
-  RubyStolenLine: {fileID: 0}
-  pickUpLine: {fileID: 0}
-  voiceManager: {fileID: 0}
 --- !u!1 &1204161515 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4943967341540063013, guid: 78a2979f88a1b0343b90fcf769585ff4, type: 3}
