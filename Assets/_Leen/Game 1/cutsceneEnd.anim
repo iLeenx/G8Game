@@ -245,8 +245,8 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 2
-    functionName: _GoMainMenu
-    data: Main Menu
+    functionName: _GoToCutScene2
+    data: final cutscene 1
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

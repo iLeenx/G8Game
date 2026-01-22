@@ -4672,6 +4672,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6638183193997740778, guid: a4160a25815a0b14aa1d0755b76a77b5, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6656129795452354080, guid: a4160a25815a0b14aa1d0755b76a77b5, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -4679,6 +4683,10 @@ PrefabInstance:
     - target: {fileID: 8691382686462644884, guid: a4160a25815a0b14aa1d0755b76a77b5, type: 3}
       propertyPath: m_Name
       value: Player (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037073571457307789, guid: a4160a25815a0b14aa1d0755b76a77b5, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9216448596316769934, guid: a4160a25815a0b14aa1d0755b76a77b5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17758,7 +17766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33a8ae211074f94b981e9b3bb8736e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CutsceneSignals
-  nextSceneName: Game 1
+  nextSceneName: final cutscene 1
 --- !u!4 &1049335624
 Transform:
   m_ObjectHideFlags: 0
@@ -25797,6 +25805,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1620982437547207635, guid: 78a2979f88a1b0343b90fcf769585ff4, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1848264717499237842, guid: 78a2979f88a1b0343b90fcf769585ff4, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -39210,6 +39222,10 @@ PrefabInstance:
     - target: {fileID: 1191164552191625363, guid: 78a2979f88a1b0343b90fcf769585ff4, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620982437547207635, guid: 78a2979f88a1b0343b90fcf769585ff4, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2087898710667302276, guid: 78a2979f88a1b0343b90fcf769585ff4, type: 3}
       propertyPath: m_LocalScale.x

@@ -18,6 +18,14 @@ public class SceneSwitch : MonoBehaviour
         Cursor.visible = true;
         Time.timeScale = 1f;
     }
+    public void _GoToCutScene2()
+    {
+        CutsceneOnce.ResetForNewGame();
+        SceneManager.LoadScene("final cutscene 1");
+
+        Cursor.visible = true;
+        Time.timeScale = 1f;
+    }
 
     public void _BackPlay()
     {
